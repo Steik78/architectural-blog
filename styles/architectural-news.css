@@ -1,5 +1,5 @@
 /******Start header*******/
-.main-header, .news{
+.main-header, .news, .read{
     max-width: 952px;
     margin: 0 auto;
     padding: 0 5px;
@@ -36,7 +36,7 @@
     color: #000000;
 }
 .item{
-    flex-wrap: wrap;
+    flex-wrap: wrap
 } 
 .news-list{
     flex-basis: 30%;
@@ -146,5 +146,198 @@
 @media screen and (max-width:450px){
     .news-list{
         flex-basis: 100% !important;
+    }
+}
+ /****************Start news architectural page1*****************/
+ .news-header .item{
+    margin: 30px 0 0 0;
+}
+.news-header-list{
+    margin: auto;
+    flex-basis: 30%; 
+}
+.news-header-list:nth-child(1){
+    margin-left: 0;
+}
+ 
+.news-header-list:nth-child(3){
+    margin-right: 0;     
+} 
+.news-header-list img{
+    float: left;
+    margin-right: 5px;
+     
+}
+.news-header-list span{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.5);
+    display: block; 
+}
+.news-header-list span:last-child{
+    color:#D90000;
+}
+.news hr{
+    width: 100%;
+    margin: 20px 0 0 0 ;
+}
+/*=========================================================================*/
+.news-content p{
+    font-size: 18px;
+    line-height: 170%;
+    color: #333333;
+    margin: 20px 0;
+}
+.news-content p:first-child{
+    font-weight: 600;
+}
+.content-list:nth-child(1){
+    flex-basis: 32%;
+    margin: 10px auto 10px 0;
+
+}
+.content-list:nth-child(2){
+    flex-basis: 66%;
+    margin: 10px 0 10px auto;
+}
+.content-list img{
+    width: 100%;
+}
+.content-list h3{
+    margin-top: 10px;
+}
+.content-list span{
+    font-size: 14px;
+    line-height: 170%;
+    color: rgba(0, 0, 0, 0.5);
+}
+.content-item-list:nth-child(1){
+    flex-basis: 48.5%;
+    margin: 0 auto 10px 0;
+}
+.content-item-list:nth-child(2){
+    flex-basis: 48.5%;
+    margin: 0 0 10px auto;
+}
+.content-item-list:nth-child(3){
+    flex-basis: 100%;
+    
+}
+/*======================================================================*/
+section:nth-child(2){
+  background-color: #fff;
+}
+.read{
+    margin-bottom: 30px;
+}
+.read-list{
+    flex-basis: 32%;
+    margin: 0 auto auto auto;
+    color: #333333;
+}
+.read-list:hover{
+    color:#D90000;
+}
+.read-list:nth-child(1){
+    margin-left: 0;
+}
+.read-list:nth-child(3){
+    margin-right: 0;
+}
+.read-list img{
+    float: left;
+    margin-right: 10px;
+     
+}
+.read-list a{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    font-feature-settings: 'liga' off, 'calt' off, 'kern' off;
+    margin: 10px 0 20px 0;
+    display: block;
+    color: #333333;
+}
+.read-list a:hover{
+    color:#D90000;
+}
+.read h3{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 170%;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px
+}
+  /****************End news architectural page1*****************/
+@media screen  and (max-width:1020px){
+    .read-list img{
+        float: none;
+        width: 100%;
+        
+    }
+}
+@media screen and (max-width:768px){
+    .news-header.item{
+        flex-direction: column;
+        flex-wrap: wrap;
+         
+    }
+    .news-header-list{
+        margin: auto;
+        flex-basis: 100%;
+    }
+    .news-header-list img{
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+         
+    }
+    .main-header .item{
+        flex-direction: column;
+        text-align: left;
+         
+    }
+    .breadcrumbs-list{
+        margin: 5px 0;
+    }
+     
+    .main-header ul.item li+li:before {
+        padding: 0;
+        color: rgba(51, 51, 51, 0.2);
+        content: " ";
+    }
+}
+@media screen and (max-width:550px){
+    .news-content.item:nth-child(1){
+        flex-direction: column;
+    }
+    .content-list:nth-child(1){
+        flex-basis: 100%;
+        margin: 10px auto 10px 0;
+    
+    }
+    .content-list:nth-child(2){
+        flex-basis: 100%;
+        margin: 10px 0 10px auto;
+    }
+    .content-list:nth-child(1){
+        order: 2;
+    }
+    .content-list:nth-child(2){
+        order:1;
+    }
+}
+
+
+@media screen and (max-width:425px){
+     
+    .read.item{
+        flex-direction: column;
+    }
+    .read-list{
+        flex-basis: 100%;
     }
 }
